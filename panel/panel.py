@@ -14,16 +14,16 @@ from urllib.parse import urlparse, parse_qs
 from datetime import datetime, timedelta
 
 # --- CONSTANTS ---
-DB_FILE = "/etc/firewallfalcon/users.db"
-RESELLERS_DB = "/etc/firewallfalcon/resellers.db"
-BW_DIR = "/etc/firewallfalcon/bandwidth"
-PANEL_CONF = "/etc/firewallfalcon/panel.conf"
-PANEL_HTML = "/etc/firewallfalcon/panel/index.html"
-FF_USERS_GROUP = "firewallfalcon-users"
+DB_FILE = "/etc/ambervpn/users.db"
+RESELLERS_DB = "/etc/ambervpn/resellers.db"
+BW_DIR = "/etc/ambervpn/bandwidth"
+PANEL_CONF = "/etc/ambervpn/panel.conf"
+PANEL_HTML = "/etc/ambervpn/panel/index.html"
+FF_USERS_GROUP = "ambervpn-users"
 PORT = 44380
 
 # --- GLOBAL STATE ---
-SESSION_FILE = "/etc/firewallfalcon/sessions.json"
+SESSION_FILE = "/etc/ambervpn/sessions.json"
 sessions = {}  # token -> {"username": str, "role": "admin"|"reseller", "created_at": float}
 
 def load_sessions():
