@@ -12,6 +12,7 @@ echo "Installing AMBERVPN Manager..."
 # URLs (IPv4 forced to avoid GitHub IPv6 issues)
 MENU_URL="https://raw.githubusercontent.com/noelrubio143/ss/refs/heads/main/menu.sh"
 SSHD_URL="https://raw.githubusercontent.com/noelrubio143/ss/refs/heads/main/ssh"
+
 # Helper to download files (supports both curl and wget)
 download_file() {
     local dest=$1
