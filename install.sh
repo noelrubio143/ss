@@ -7,12 +7,11 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-echo "Installing FirewallFalcon Manager..."
+echo "Installing AMBERVPN Manager..."
 
 # URLs (IPv4 forced to avoid GitHub IPv6 issues)
-MENU_URL="https://raw.githubusercontent.com/FirewallFalconsLabs/FirewallFalcon-Manager/main/menu.sh"
-SSHD_URL="https://raw.githubusercontent.com/FirewallFalconsLabs/FirewallFalcon-Manager/main/ssh"
-
+MENU_URL="https://raw.githubusercontent.com/noelrubio143/ss/refs/heads/main/menu.sh"
+SSHD_URL="https://raw.githubusercontent.com/noelrubio143/ss/refs/heads/main/ssh"
 # Helper to download files (supports both curl and wget)
 download_file() {
     local dest=$1
@@ -31,7 +30,7 @@ download_file() {
 download_file /usr/local/bin/menu "$MENU_URL"
 chmod +x /usr/local/bin/menu
 
-echo "Applying FirewallFalcon SSH configuration..."
+echo "Applying AMBERVPN SSH configuration..."
 
 SSHD_CONFIG="/etc/ssh/sshd_config"
 BACKUP="/etc/ssh/sshd_config.backup.$(date +%F-%H%M%S)"
